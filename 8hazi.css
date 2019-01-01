@@ -1,0 +1,107 @@
+body {
+	padding:0;
+	margin:0;
+	font-family: 'Niramit', sans-serif;
+	font-family:Arial;
+	font-size:14px;
+	color:#555555;
+}
+
+header img {
+	max-width: 100%;
+    height: auto;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+     
+}
+
+h1 {
+	font-size:24px;
+}
+
+h2 {
+	font-size:20px;
+}
+
+.recept {
+	width:700px;
+	margin: auto; /*ez hozta középre*/
+	text-align:justify;
+	justify-content:center; /*ez itt felesleges, mert a margin auto alapból középre hozza már, ez csak a tartalmat hozzá középre, alapvetően display block*/
+}
+
+.recept img { /*külön képbe az img-t vagy a képnek, ez így túl általános */
+	float:left;
+	margin-right:30px; /*ez így jó, vagy lehetett volna máshogy is?*/
+	max-width: 100%;
+    height: auto;
+}
+
+.hozzavalok {
+	width:auto;
+	height:auto;
+}
+
+.hozzavalok ul li {
+	list-style-type:disc;
+}
+
+.sztori, .alapanyagok, .kapcsolodo {
+	width:300px; /*ha már kap width-et, nem floatolt be a képhez*/
+	height:auto;
+	float:left;
+}
+ 
+.elkeszites {
+	width:380px;
+	height:auto;
+	float:right;
+}
+
+.elkeszites ul li{
+	list-style-type:decimal;
+}
+
+
+@media screen and (max-width:720px) {
+	 
+	.recept {
+		width:90%;
+		justify-content:center;
+		padding:10px;
+	}
+	 .sztori, .alapanyagok, .kapcsolodo, .elkeszites {
+		 float:none;
+		 justify-content:center;
+		 padding:10px;
+		 width:100%;
+	 }
+	 .recept img {
+	float:none;
+	padding:10px;
+	margin-right:none;
+	 }
+	
+}
+
+@media screen and (max-width:520px) {
+	 
+	 .recept {
+		width:70%;
+		justify-content:center;
+		padding:5px;
+	}
+	 .sztori, .alapanyagok, .kapcsolodo, .elkeszites { /*egy class is lehetett volna*/
+		 float:none;
+		 justify-content:center;
+		 padding:5px;
+		 width:100%;
+	 }
+	  .recept img {
+	float:none;
+	padding:5px;
+	margin-right:none;
+	 }
+	 
+}
